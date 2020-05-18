@@ -1,5 +1,5 @@
 ---
-title: 'Write drunk, edit sober'
+title: 'Edited by Marcell from git push'
 layout: article.hbs 
 ---
 
