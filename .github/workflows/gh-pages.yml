@@ -10,17 +10,14 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x]
-
     steps:
-      - name: Build
-        run: npm run build
+      - uses: actions/checkout@v2
 
-      - name: GitHub Pages action
+      - run: npm run build
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.1
