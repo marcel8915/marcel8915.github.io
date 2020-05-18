@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: source
   pull_request:
-    branches: [ master ]
+    branches: source
 
 jobs:
   deploy:
@@ -24,3 +24,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: master
